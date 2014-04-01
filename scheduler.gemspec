@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Scheduler::VERSION
   spec.authors       = ["Hsing-Hui Hsu"]
   spec.email         = ["hhhsu1@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Tells the Adies where to go.}
+  spec.description   = %q{On Friday.}
   spec.homepage      = ""
   spec.license       = "MIT"
 

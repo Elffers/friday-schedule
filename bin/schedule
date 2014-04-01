@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require 'lib/scheduler'
+
+def schedule(adie)
+  companies = %w[Expedia1 Expedia2 EMC Apex Foundry EnergySavvy]
+  times = TimeSlot.all.select {|time| time.adies.include? adie }
+  schedule = {}
+  times.map do |slot|
+    index = slot.adies.find_index(adie)
+    company = Company.find_by_name(companies[index])
+    schedule[slot.time] = [company.name, company.room]
+  end
+  schedule.each_pair do |time, company|
+    puts "From #{time}, you are interviewing with #{company.first} in the #{company.last}"
+  end
+end
+
+schedule("Hsing-Hui")

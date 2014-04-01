@@ -3,8 +3,14 @@ module Scheduler
     attr_accessor :name, :room, :schedule
 
     def initialize(array)
-      @name = array.first
-      @room = array.last
+      @name = array.first.strip
+      @room = array.last.strip
+    end
+
+    def self.all
+      @companies = CSV.read("companies.csv").map do |array|
+        Company.new(array)
+      end
     end
 
     def self.first
@@ -18,12 +24,6 @@ module Scheduler
     def self.find_by_name(name)
       all.find do |company|
         company.name.to_s == name.to_s
-      end
-    end
-
-    def self.all
-      @companies = CSV.read("companies.csv").map do |array|
-        Company.new(array)
       end
     end
 
