@@ -1,14 +1,14 @@
 #!/usr/bin/env ruby
 
-require 'lib/scheduler'
+require './lib/scheduler'
 
 def schedule(adie)
   companies = %w[Expedia1 Expedia2 EMC Apex Foundry EnergySavvy]
-  times = TimeSlot.all.select {|time| time.adies.include? adie }
+  times = Scheduler::TimeSlot.all.select {|time| time.adies.include? adie }
   schedule = {}
   times.map do |slot|
     index = slot.adies.find_index(adie)
-    company = Company.find_by_name(companies[index])
+    company = Scheduler::Company.find_by_name(companies[index])
     schedule[slot.time] = [company.name, company.room]
   end
   schedule.each_pair do |time, company|

@@ -8,7 +8,7 @@ module Scheduler
     end
 
     def self.all
-      @times ||= File.readlines("timeslots.txt").map do |line|
+      @times ||= File.readlines("#{root}/timeslots.txt").map do |line|
         time = line.match(/\d+:\d+\s\-\s\d+:\d+/)
         adies = time.post_match.strip.split(/\s+/)
         TimeSlot.new([time.to_s, adies])
