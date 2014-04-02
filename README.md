@@ -10,11 +10,11 @@ Download this repo, then in your terminal, type:
 
 ## Usage
 
-In your terminal, type:  
+Make sure you are within the downloaded directory, and then in your terminal, type:  
 
     $schedule "your firstname"
 
-So for example, 
+It only works with your capitalized first name. So for example, 
 
     $schedule "Hsing-Hui"
     
@@ -27,6 +27,8 @@ returns:
     4:05 - 4:20: Expedia2 (Skype Room)
     4:25 - 4:40: EMC (Capitol Hill Room)
     4:45 - 5:00: Expedia1 (Surface Room)
+    
+Ta-da!
 
 ## Contributing
 
