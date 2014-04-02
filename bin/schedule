@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require './lib/scheduler'
+puts ARGV[0].inspect
 
 def schedule(adie)
   companies = %w[Expedia1 Expedia2 EMC Apex Foundry EnergySavvy]
@@ -16,4 +17,4 @@ def schedule(adie)
   end
 end
 
-schedule("Hsing-Hui")
+schedule(ARGV[0])
