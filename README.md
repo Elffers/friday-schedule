@@ -1,6 +1,6 @@
 # Scheduler
 
-Since it was kind of a pain to figure out our interview schedule this Friday from Elise's email, here is a command-line gem to tell you who you're interviewing with when and in what room.
+Since it was kind of a pain to figure out our interview schedule this Friday (4 April 2014) from Elise's email, here is a command-line gem to tell you who you're interviewing with when and in what room.
 
 ## Installation and Usage
 
