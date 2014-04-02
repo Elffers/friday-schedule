@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require './lib/scheduler'
-puts ARGV[0].inspect
+puts ARGV[0] + '\'s Interview Schedule:'
 
 def schedule(adie)
   companies = %w[Expedia1 Expedia2 EMC Apex Foundry EnergySavvy]
@@ -13,7 +13,7 @@ def schedule(adie)
     schedule[slot.time] = [company.name, company.room]
   end
   schedule.each_pair do |time, company|
-    puts "From #{time}, you are interviewing with #{company.first} in the #{company.last}"
+    puts "#{time}: #{company.first} (#{company.last})"
   end
 end
 
