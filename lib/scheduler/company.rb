@@ -8,7 +8,7 @@ module Scheduler
     end
 
     def self.all
-      @companies = CSV.read("companies.csv").map do |array|
+      @companies = CSV.read("#{Scheduler.root}/scheduler/companies.csv").map do |array|
         Company.new(array)
       end
     end
